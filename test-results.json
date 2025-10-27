@@ -1,0 +1,2145 @@
+{
+  "config": {
+    "configFile": "/Users/eugenestuckless/eir/eirtests-runner/playwright.config.ts",
+    "rootDir": "/tmp",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/eugenestuckless/eir/eirtests-runner/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/tmp",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+      "file": "eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Eco-Conscious Features Accessibility",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2888,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts:14:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                      "column": 32,
+                      "line": 14
+                    },
+                    "snippet": "  12 |   // Verify CDS Vic East app link (promotes mobile recycling) is accessible\n  13 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 14 |   await expect(vicEastAppLink).toBeVisible();\n     |                                ^\n  15 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  16 |   \n  17 |   // Verify \"See All Locations\" feature is accessible"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                        "column": 32,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n  12 |   // Verify CDS Vic East app link (promotes mobile recycling) is accessible\n  13 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 14 |   await expect(vicEastAppLink).toBeVisible();\n     |                                ^\n  15 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  16 |   \n  17 |   // Verify \"See All Locations\" feature is accessible\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts:14:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:36:49.347Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                    "column": 32,
+                    "line": 14
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2845,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts:14:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                      "column": 32,
+                      "line": 14
+                    },
+                    "snippet": "  12 |   // Verify CDS Vic East app link (promotes mobile recycling) is accessible\n  13 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 14 |   await expect(vicEastAppLink).toBeVisible();\n     |                                ^\n  15 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  16 |   \n  17 |   // Verify \"See All Locations\" feature is accessible"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                        "column": 32,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n  12 |   // Verify CDS Vic East app link (promotes mobile recycling) is accessible\n  13 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 14 |   await expect(vicEastAppLink).toBeVisible();\n     |                                ^\n  15 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  16 |   \n  17 |   // Verify \"See All Locations\" feature is accessible\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts:14:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:36:52.994Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                    "column": 32,
+                    "line": 14
+                  }
+                },
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3089,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts:14:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                      "column": 32,
+                      "line": 14
+                    },
+                    "snippet": "  12 |   // Verify CDS Vic East app link (promotes mobile recycling) is accessible\n  13 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 14 |   await expect(vicEastAppLink).toBeVisible();\n     |                                ^\n  15 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  16 |   \n  17 |   // Verify \"See All Locations\" feature is accessible"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                        "column": 32,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n  12 |   // Verify CDS Vic East app link (promotes mobile recycling) is accessible\n  13 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 14 |   await expect(vicEastAppLink).toBeVisible();\n     |                                ^\n  15 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  16 |   \n  17 |   // Verify \"See All Locations\" feature is accessible\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts:14:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:36:56.542Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-ae502-ious-Features-Accessibility-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+                    "column": 32,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7db77618d78d2061a31a-c7358cc2a4d8ee204325",
+          "file": "../private/tmp/eirtests-1761536206261/tests/eco-conscious-user/eco-conscious-features-accessibility.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+      "file": "eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify Site Navigation Core Functionality",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2849,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts:11:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                      "column": 32,
+                      "line": 11
+                    },
+                    "snippet": "   9 |   // Test VIC EAST APP navigation\n  10 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 11 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  12 |   \n  13 |   // Test Find Recycling Locations navigation\n  14 |   const findRecyclingButton = page.locator('.btn.xlge.blue', { hasText: 'FIND RECYCLING NEAR ME' });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                        "column": 32,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n   9 |   // Test VIC EAST APP navigation\n  10 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 11 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  12 |   \n  13 |   // Test Find Recycling Locations navigation\n  14 |   const findRecyclingButton = page.locator('.btn.xlge.blue', { hasText: 'FIND RECYCLING NEAR ME' });\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts:11:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:36:49.352Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                    "column": 32,
+                    "line": 11
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2650,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts:11:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                      "column": 32,
+                      "line": 11
+                    },
+                    "snippet": "   9 |   // Test VIC EAST APP navigation\n  10 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 11 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  12 |   \n  13 |   // Test Find Recycling Locations navigation\n  14 |   const findRecyclingButton = page.locator('.btn.xlge.blue', { hasText: 'FIND RECYCLING NEAR ME' });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                        "column": 32,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n   9 |   // Test VIC EAST APP navigation\n  10 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 11 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  12 |   \n  13 |   // Test Find Recycling Locations navigation\n  14 |   const findRecyclingButton = page.locator('.btn.xlge.blue', { hasText: 'FIND RECYCLING NEAR ME' });\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts:11:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:36:52.974Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                    "column": 32,
+                    "line": 11
+                  }
+                },
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2719,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts:11:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                      "column": 32,
+                      "line": 11
+                    },
+                    "snippet": "   9 |   // Test VIC EAST APP navigation\n  10 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 11 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  12 |   \n  13 |   // Test Find Recycling Locations navigation\n  14 |   const findRecyclingButton = page.locator('.btn.xlge.blue', { hasText: 'FIND RECYCLING NEAR ME' });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                        "column": 32,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n   9 |   // Test VIC EAST APP navigation\n  10 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 11 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  12 |   \n  13 |   // Test Find Recycling Locations navigation\n  14 |   const findRecyclingButton = page.locator('.btn.xlge.blue', { hasText: 'FIND RECYCLING NEAR ME' });\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts:11:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:36:56.245Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-90692-vigation-Core-Functionality-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+                    "column": 32,
+                    "line": 11
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ace8c9efd93237ab6055-399ac237888fbddaee97",
+          "file": "../private/tmp/eirtests-1761536206261/tests/eco-conscious-user/verify-site-navigation-core-functionality.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+      "file": "eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Victoria Homepage Key Elements Display",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 2875,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts:10:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                      "column": 32,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Verify VIC EAST APP link is visible\n   9 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 10 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  11 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  12 |   \n  13 |   // Verify FIND RECYCLING NEAR ME button is visible"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                        "column": 32,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n   8 |   // Verify VIC EAST APP link is visible\n   9 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 10 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  11 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  12 |   \n  13 |   // Verify FIND RECYCLING NEAR ME button is visible\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts:10:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:36:49.342Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                    "column": 32,
+                    "line": 10
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 2577,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts:10:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                      "column": 32,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Verify VIC EAST APP link is visible\n   9 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 10 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  11 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  12 |   \n  13 |   // Verify FIND RECYCLING NEAR ME button is visible"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                        "column": 32,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n   8 |   // Verify VIC EAST APP link is visible\n   9 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 10 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  11 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  12 |   \n  13 |   // Verify FIND RECYCLING NEAR ME button is visible\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts:10:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:36:52.974Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                    "column": 32,
+                    "line": 10
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 2478,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts:10:32",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                      "column": 32,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Verify VIC EAST APP link is visible\n   9 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 10 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  11 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  12 |   \n  13 |   // Verify FIND RECYCLING NEAR ME button is visible"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                        "column": 32,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('a').filter({ hasText: 'VIC EAST APP' })\nExpected: visible\nError: strict mode violation: locator('a').filter({ hasText: 'VIC EAST APP' }) resolved to 3 elements:\n    1) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-item-75719').getByText('Vic East App')\n    2) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-1').getByText('Vic East App')\n    3) <a href=\"https://www.returnit.com.au/vic/cds-vic-east-app/\">Vic East App</a> aka locator('#menu-top-menu-vic-2').getByText('Vic East App')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('a').filter({ hasText: 'VIC EAST APP' })\u001b[22m\n\n\n   8 |   // Verify VIC EAST APP link is visible\n   9 |   const vicEastAppLink = page.locator('a', { hasText: 'VIC EAST APP' });\n> 10 |   await expect(vicEastAppLink).toBeVisible({ timeout: 10000 });\n     |                                ^\n  11 |   await expect(vicEastAppLink).toHaveAttribute('href', 'https://www.returnit.com.au/vic/cds-vic-east-app/');\n  12 |   \n  13 |   // Verify FIND RECYCLING NEAR ME button is visible\n    at /private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts:10:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:36:56.201Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-5d1f8-mepage-Key-Elements-Display-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+                    "column": 32,
+                    "line": 10
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7b498d66c1d1847d6bca-bb246c7f4c5cf1e6e8fb",
+          "file": "../private/tmp/eirtests-1761536206261/tests/eco-conscious-user/victoria-homepage-key-elements-display.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+      "file": "eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify loyalty program information is displayed",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 13594,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts:10:29",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                      "column": 29,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Verify page loaded and has relevant content\n   9 |   const pageHeading = page.locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first();\n> 10 |   await expect(pageHeading).toBeVisible({ timeout: 10000 });\n     |                             ^\n  11 |   \n  12 |   // Look for benefits/rewards information\n  13 |   const benefitsSection = page.locator('[class*=\"benefit\"], [class*=\"reward\"], section, div')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                        "column": 29,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   8 |   // Verify page loaded and has relevant content\n   9 |   const pageHeading = page.locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first();\n> 10 |   await expect(pageHeading).toBeVisible({ timeout: 10000 });\n     |                             ^\n  11 |   \n  12 |   // Look for benefits/rewards information\n  13 |   const benefitsSection = page.locator('[class*=\"benefit\"], [class*=\"reward\"], section, div')\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts:10:29"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:36:49.348Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                    "column": 29,
+                    "line": 10
+                  }
+                },
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 13231,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts:10:29",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                      "column": 29,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Verify page loaded and has relevant content\n   9 |   const pageHeading = page.locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first();\n> 10 |   await expect(pageHeading).toBeVisible({ timeout: 10000 });\n     |                             ^\n  11 |   \n  12 |   // Look for benefits/rewards information\n  13 |   const benefitsSection = page.locator('[class*=\"benefit\"], [class*=\"reward\"], section, div')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                        "column": 29,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   8 |   // Verify page loaded and has relevant content\n   9 |   const pageHeading = page.locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first();\n> 10 |   await expect(pageHeading).toBeVisible({ timeout: 10000 });\n     |                             ^\n  11 |   \n  12 |   // Look for benefits/rewards information\n  13 |   const benefitsSection = page.locator('[class*=\"benefit\"], [class*=\"reward\"], section, div')\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts:10:29"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:37:03.775Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                    "column": 29,
+                    "line": 10
+                  }
+                },
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 13457,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts:10:29",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                      "column": 29,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Verify page loaded and has relevant content\n   9 |   const pageHeading = page.locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first();\n> 10 |   await expect(pageHeading).toBeVisible({ timeout: 10000 });\n     |                             ^\n  11 |   \n  12 |   // Look for benefits/rewards information\n  13 |   const benefitsSection = page.locator('[class*=\"benefit\"], [class*=\"reward\"], section, div')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                        "column": 29,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first()\u001b[22m\n\u001b[2m    14 × locator resolved to <h2>…</h2>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   8 |   // Verify page loaded and has relevant content\n   9 |   const pageHeading = page.locator('h1, h2').filter({ hasText: /loyalty|reward|program/i }).first();\n> 10 |   await expect(pageHeading).toBeVisible({ timeout: 10000 });\n     |                             ^\n  11 |   \n  12 |   // Look for benefits/rewards information\n  13 |   const benefitsSection = page.locator('[class*=\"benefit\"], [class*=\"reward\"], section, div')\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts:10:29"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:37:17.706Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-62ce9-am-information-is-displayed-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+                    "column": 29,
+                    "line": 10
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6ed3fd26c8c0b7ff7d74-98957ffca9da2419d91e",
+          "file": "../private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-information-is-displayed.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+      "file": "eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify loyalty program registration",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "failed",
+                  "duration": 13546,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts:11:22",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                      "column": 22,
+                      "line": 11
+                    },
+                    "snippet": "   9 |     .or(page.getByRole('link', { name: /sign up|register|join/i }))\n  10 |     .first();\n> 11 |   await signupButton.click();\n     |                      ^\n  12 |   \n  13 |   // Fill in email\n  14 |   const emailInput = page.getByLabel(/email/i).or(page.locator('input[type=\"email\"]')).first();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                        "column": 22,
+                        "line": 11
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n\n\n   9 |     .or(page.getByRole('link', { name: /sign up|register|join/i }))\n  10 |     .first();\n> 11 |   await signupButton.click();\n     |                      ^\n  12 |   \n  13 |   // Fill in email\n  14 |   const emailInput = page.getByLabel(/email/i).or(page.locator('input[type=\"email\"]')).first();\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts:11:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:36:49.345Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                    "column": 22,
+                    "line": 11
+                  }
+                },
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 4,
+                  "status": "failed",
+                  "duration": 13227,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts:11:22",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                      "column": 22,
+                      "line": 11
+                    },
+                    "snippet": "   9 |     .or(page.getByRole('link', { name: /sign up|register|join/i }))\n  10 |     .first();\n> 11 |   await signupButton.click();\n     |                      ^\n  12 |   \n  13 |   // Fill in email\n  14 |   const emailInput = page.getByLabel(/email/i).or(page.locator('input[type=\"email\"]')).first();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                        "column": 22,
+                        "line": 11
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n\n\n   9 |     .or(page.getByRole('link', { name: /sign up|register|join/i }))\n  10 |     .first();\n> 11 |   await signupButton.click();\n     |                      ^\n  12 |   \n  13 |   // Fill in email\n  14 |   const emailInput = page.getByLabel(/email/i).or(page.locator('input[type=\"email\"]')).first();\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts:11:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:37:03.716Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                    "column": 22,
+                    "line": 11
+                  }
+                },
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 4,
+                  "status": "failed",
+                  "duration": 13880,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts:11:22",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                      "column": 22,
+                      "line": 11
+                    },
+                    "snippet": "   9 |     .or(page.getByRole('link', { name: /sign up|register|join/i }))\n  10 |     .first();\n> 11 |   await signupButton.click();\n     |                      ^\n  12 |   \n  13 |   // Fill in email\n  14 |   const emailInput = page.getByLabel(/email/i).or(page.locator('input[type=\"email\"]')).first();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                        "column": 22,
+                        "line": 11
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /sign up|register|join/i }).or(getByRole('link', { name: /sign up|register|join/i })).first()\u001b[22m\n\n\n   9 |     .or(page.getByRole('link', { name: /sign up|register|join/i }))\n  10 |     .first();\n> 11 |   await signupButton.click();\n     |                      ^\n  12 |   \n  13 |   // Fill in email\n  14 |   const emailInput = page.getByLabel(/email/i).or(page.locator('input[type=\"email\"]')).first();\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts:11:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:37:17.671Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-103aa-oyalty-program-registration-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+                    "column": 22,
+                    "line": 11
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "67090b26bf8e6e50e592-e156ad365920a1d10c67",
+          "file": "../private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-registration-process.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+      "file": "eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify loyalty program rewards tracking",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 13269,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts:47:31",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                      "column": 31,
+                      "line": 47
+                    },
+                    "snippet": "  45 |     .first();\n  46 |   \n> 47 |   await expect(pointsDisplay).toBeVisible({ timeout: 10000 });\n     |                               ^\n  48 |   \n  49 |   // Verify points value is numeric and visible\n  50 |   const pointsValue = page.locator('[class*=\"points\"], [class*=\"balance\"]')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                        "column": 31,
+                        "line": 47
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n\n\n  45 |     .first();\n  46 |   \n> 47 |   await expect(pointsDisplay).toBeVisible({ timeout: 10000 });\n     |                               ^\n  48 |   \n  49 |   // Verify points value is numeric and visible\n  50 |   const pointsValue = page.locator('[class*=\"points\"], [class*=\"balance\"]')\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts:47:31"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:36:59.198Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                    "column": 31,
+                    "line": 47
+                  }
+                },
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 13223,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts:47:31",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                      "column": 31,
+                      "line": 47
+                    },
+                    "snippet": "  45 |     .first();\n  46 |   \n> 47 |   await expect(pointsDisplay).toBeVisible({ timeout: 10000 });\n     |                               ^\n  48 |   \n  49 |   // Verify points value is numeric and visible\n  50 |   const pointsValue = page.locator('[class*=\"points\"], [class*=\"balance\"]')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                        "column": 31,
+                        "line": 47
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n\n\n  45 |     .first();\n  46 |   \n> 47 |   await expect(pointsDisplay).toBeVisible({ timeout: 10000 });\n     |                               ^\n  48 |   \n  49 |   // Verify points value is numeric and visible\n  50 |   const pointsValue = page.locator('[class*=\"points\"], [class*=\"balance\"]')\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts:47:31"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:37:13.049Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                    "column": 31,
+                    "line": 47
+                  }
+                },
+                {
+                  "workerIndex": 24,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 13144,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts:47:31",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                      "column": 31,
+                      "line": 47
+                    },
+                    "snippet": "  45 |     .first();\n  46 |   \n> 47 |   await expect(pointsDisplay).toBeVisible({ timeout: 10000 });\n     |                               ^\n  48 |   \n  49 |   // Verify points value is numeric and visible\n  50 |   const pointsValue = page.locator('[class*=\"points\"], [class*=\"balance\"]')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                        "column": 31,
+                        "line": 47
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/points|balance|rewards/i).or(locator('.points, .balance, [class*=\"reward\"]')).first()\u001b[22m\n\n\n  45 |     .first();\n  46 |   \n> 47 |   await expect(pointsDisplay).toBeVisible({ timeout: 10000 });\n     |                               ^\n  48 |   \n  49 |   // Verify points value is numeric and visible\n  50 |   const pointsValue = page.locator('[class*=\"points\"], [class*=\"balance\"]')\n    at /private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts:47:31"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:37:26.904Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-a85f9-ty-program-rewards-tracking-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+                    "column": 31,
+                    "line": 47
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fb21f48f474f2273d54e-f62609fe51c8346996c0",
+          "file": "../private/tmp/eirtests-1761536206261/tests/loyalty-program/verify-loyalty-program-rewards-tracking.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/mobile-app/verify-app-store-download-links-are-visible.spec.ts",
+      "file": "eirtests-1761536206261/tests/mobile-app/verify-app-store-download-links-are-visible.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify app store download links are visible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2558,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Both app store links verified with real selectors from database\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:36:59.467Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e7abaa47931d29928441-f8d1d2d60d351ed41992",
+          "file": "../private/tmp/eirtests-1761536206261/tests/mobile-app/verify-app-store-download-links-are-visible.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/mobile-app/verify-cds-vic-east-app-information-is-displayed.spec.ts",
+      "file": "eirtests-1761536206261/tests/mobile-app/verify-cds-vic-east-app-information-is-displayed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify CDS Vic East app information is displayed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2354,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ CDS Vic East app page displays both Apple App Store and Google Play Store download links\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:37:00.098Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a3f09c3e229659a2cc96-48011ae5a1838c3a813c",
+          "file": "../private/tmp/eirtests-1761536206261/tests/mobile-app/verify-cds-vic-east-app-information-is-displayed.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/smoke/verify-cds-vic-east-app-information-and-download-links.spec.ts",
+      "file": "eirtests-1761536206261/tests/smoke/verify-cds-vic-east-app-information-and-download-links.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify CDS Vic East app download page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2372,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ CDS Vic East app download page verified with Apple App Store and Google Play Store links\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:37:02.127Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "22cebff1844fc2e244a0-185fff0d67f6c4dc479c",
+          "file": "../private/tmp/eirtests-1761536206261/tests/smoke/verify-cds-vic-east-app-information-and-download-links.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+      "file": "eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify contact form submission functionality",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7556,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts:16:27",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                      "column": 27,
+                      "line": 16
+                    },
+                    "snippet": "  14 |     .first();\n  15 |   \n> 16 |   await expect(nameInput).toBeVisible();\n     |                           ^\n  17 |   await nameInput.fill('Test User');\n  18 |   \n  19 |   // Fill in email field"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                        "column": 27,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n\n\n  14 |     .first();\n  15 |   \n> 16 |   await expect(nameInput).toBeVisible();\n     |                           ^\n  17 |   await nameInput.fill('Test User');\n  18 |   \n  19 |   // Fill in email field\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts:16:27"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:37:02.544Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                    "column": 27,
+                    "line": 16
+                  }
+                },
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7551,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts:16:27",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                      "column": 27,
+                      "line": 16
+                    },
+                    "snippet": "  14 |     .first();\n  15 |   \n> 16 |   await expect(nameInput).toBeVisible();\n     |                           ^\n  17 |   await nameInput.fill('Test User');\n  18 |   \n  19 |   // Fill in email field"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                        "column": 27,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n\n\n  14 |     .first();\n  15 |   \n> 16 |   await expect(nameInput).toBeVisible();\n     |                           ^\n  17 |   await nameInput.fill('Test User');\n  18 |   \n  19 |   // Fill in email field\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts:16:27"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:37:10.481Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                    "column": 27,
+                    "line": 16
+                  }
+                },
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7449,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts:16:27",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                      "column": 27,
+                      "line": 16
+                    },
+                    "snippet": "  14 |     .first();\n  15 |   \n> 16 |   await expect(nameInput).toBeVisible();\n     |                           ^\n  17 |   await nameInput.fill('Test User');\n  18 |   \n  19 |   // Fill in email field"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                        "column": 27,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/name|your name|full name/i).or(locator('input[name*=\"name\"]')).or(locator('input[placeholder*=\"name\" i]')).first()\u001b[22m\n\n\n  14 |     .first();\n  15 |   \n> 16 |   await expect(nameInput).toBeVisible();\n     |                           ^\n  17 |   await nameInput.fill('Test User');\n  18 |   \n  19 |   // Fill in email field\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts:16:27"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:37:18.675Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-2a7ec-rm-submission-functionality-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+                    "column": 27,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e6b8d80fd117bf530c3f-0ae1f8571fa391b986a4",
+          "file": "../private/tmp/eirtests-1761536206261/tests/smoke/verify-contact-form-submission-functionality.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+      "file": "eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify postcode search for recycling locations",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 8241,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts:11:30",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                      "column": 30,
+                      "line": 11
+                    },
+                    "snippet": "   9 |   const searchButton = page.locator('#bh-sl-submit');\n  10 |   await expect(searchButton).toBeVisible();\n> 11 |   await expect(searchButton).toHaveText('SEARCH');\n     |                              ^\n  12 |   \n  13 |   // Note: Search input field ID not captured, using generic fallback\n  14 |   // Look for text input near the search button"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                        "column": 30,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n\n\n   9 |   const searchButton = page.locator('#bh-sl-submit');\n  10 |   await expect(searchButton).toBeVisible();\n> 11 |   await expect(searchButton).toHaveText('SEARCH');\n     |                              ^\n  12 |   \n  13 |   // Note: Search input field ID not captured, using generic fallback\n  14 |   // Look for text input near the search button\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts:11:30"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:37:04.507Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                    "column": 30,
+                    "line": 11
+                  }
+                },
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 8344,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts:11:30",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                      "column": 30,
+                      "line": 11
+                    },
+                    "snippet": "   9 |   const searchButton = page.locator('#bh-sl-submit');\n  10 |   await expect(searchButton).toBeVisible();\n> 11 |   await expect(searchButton).toHaveText('SEARCH');\n     |                              ^\n  12 |   \n  13 |   // Note: Search input field ID not captured, using generic fallback\n  14 |   // Look for text input near the search button"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                        "column": 30,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n\n\n   9 |   const searchButton = page.locator('#bh-sl-submit');\n  10 |   await expect(searchButton).toBeVisible();\n> 11 |   await expect(searchButton).toHaveText('SEARCH');\n     |                              ^\n  12 |   \n  13 |   // Note: Search input field ID not captured, using generic fallback\n  14 |   // Look for text input near the search button\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts:11:30"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:37:13.228Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                    "column": 30,
+                    "line": 11
+                  }
+                },
+                {
+                  "workerIndex": 22,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 8319,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts:11:30",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                      "column": 30,
+                      "line": 11
+                    },
+                    "snippet": "   9 |   const searchButton = page.locator('#bh-sl-submit');\n  10 |   await expect(searchButton).toBeVisible();\n> 11 |   await expect(searchButton).toHaveText('SEARCH');\n     |                              ^\n  12 |   \n  13 |   // Note: Search input field ID not captured, using generic fallback\n  14 |   // Look for text input near the search button"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                        "column": 30,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#bh-sl-submit')\nExpected: \u001b[32m\"S\u001b[7mEARCH\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"S\u001b[7mearch\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#bh-sl-submit')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"submit\" id=\"bh-sl-submit\" class=\"btn purple sml\">Search</button>\u001b[22m\n\u001b[2m      - unexpected value \"Search\"\u001b[22m\n\n\n   9 |   const searchButton = page.locator('#bh-sl-submit');\n  10 |   await expect(searchButton).toBeVisible();\n> 11 |   await expect(searchButton).toHaveText('SEARCH');\n     |                              ^\n  12 |   \n  13 |   // Note: Search input field ID not captured, using generic fallback\n  14 |   // Look for text input near the search button\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts:11:30"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:37:22.188Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cef28-rch-for-recycling-locations-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+                    "column": 30,
+                    "line": 11
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "54a75f1e4fc2d6de25c0-46b76a5814d40339cece",
+          "file": "../private/tmp/eirtests-1761536206261/tests/smoke/verify-postcode-search-for-recycling-locations.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+      "file": "eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify ReturnIt Victoria header loads correctly",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 23,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1654,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts:15:24",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                      "column": 24,
+                      "line": 15
+                    },
+                    "snippet": "  13 |   // Verify header exists\n  14 |   const header = page.locator('header').or(page.locator('[role=\"banner\"]'));\n> 15 |   await expect(header).toBeVisible({ timeout: 5000 });\n     |                        ^\n  16 |   \n  17 |   // Verify page has loaded successfully with HTTP 200\n  18 |   expect(page.url()).toContain('/vic');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                        "column": 24,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n\n\n  13 |   // Verify header exists\n  14 |   const header = page.locator('header').or(page.locator('[role=\"banner\"]'));\n> 15 |   await expect(header).toBeVisible({ timeout: 5000 });\n     |                        ^\n  16 |   \n  17 |   // Verify page has loaded successfully with HTTP 200\n  18 |   expect(page.url()).toContain('/vic');\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts:15:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:37:26.665Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                    "column": 24,
+                    "line": 15
+                  }
+                },
+                {
+                  "workerIndex": 25,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2308,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts:15:24",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                      "column": 24,
+                      "line": 15
+                    },
+                    "snippet": "  13 |   // Verify header exists\n  14 |   const header = page.locator('header').or(page.locator('[role=\"banner\"]'));\n> 15 |   await expect(header).toBeVisible({ timeout: 5000 });\n     |                        ^\n  16 |   \n  17 |   // Verify page has loaded successfully with HTTP 200\n  18 |   expect(page.url()).toContain('/vic');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                        "column": 24,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n\n\n  13 |   // Verify header exists\n  14 |   const header = page.locator('header').or(page.locator('[role=\"banner\"]'));\n> 15 |   await expect(header).toBeVisible({ timeout: 5000 });\n     |                        ^\n  16 |   \n  17 |   // Verify page has loaded successfully with HTTP 200\n  18 |   expect(page.url()).toContain('/vic');\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts:15:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:37:29.180Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                    "column": 24,
+                    "line": 15
+                  }
+                },
+                {
+                  "workerIndex": 27,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1727,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts:15:24",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                      "column": 24,
+                      "line": 15
+                    },
+                    "snippet": "  13 |   // Verify header exists\n  14 |   const header = page.locator('header').or(page.locator('[role=\"banner\"]'));\n> 15 |   await expect(header).toBeVisible({ timeout: 5000 });\n     |                        ^\n  16 |   \n  17 |   // Verify page has loaded successfully with HTTP 200\n  18 |   expect(page.url()).toContain('/vic');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                        "column": 24,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('header').or(locator('[role=\"banner\"]'))\nExpected: visible\nError: strict mode violation: locator('header').or(locator('[role=\"banner\"]')) resolved to 2 elements:\n    1) <header class=\"header\">…</header> aka getByRole('banner').first()\n    2) <header class=\"header header-fixed\">…</header> aka getByRole('banner').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('header').or(locator('[role=\"banner\"]'))\u001b[22m\n\n\n  13 |   // Verify header exists\n  14 |   const header = page.locator('header').or(page.locator('[role=\"banner\"]'));\n> 15 |   await expect(header).toBeVisible({ timeout: 5000 });\n     |                        ^\n  16 |   \n  17 |   // Verify page has loaded successfully with HTTP 200\n  18 |   expect(page.url()).toContain('/vic');\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts:15:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:37:32.244Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-cccda-oria-header-loads-correctly-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+                    "column": 24,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "db522cb7d6637eda92ae-4152cc39d21872005b00",
+          "file": "../private/tmp/eirtests-1761536206261/tests/smoke/verify-returnit-victoria-header-loads-correctly.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+      "file": "eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user login to access recycling history",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 26,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2388,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts:10:29",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                      "column": 29,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Find and click the LOGIN button in header (using actual selector from DB)\n   9 |   const loginButton = page.locator('.btn.purple.sml').getByText('LOGIN');\n> 10 |   await expect(loginButton).toBeVisible();\n     |                             ^\n  11 |   await expect(loginButton).toHaveAttribute('href', 'https://express.returnit.com.au/');\n  12 |   \n  13 |   // Click login and verify redirect to external login system"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                        "column": 29,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n\n\n   8 |   // Find and click the LOGIN button in header (using actual selector from DB)\n   9 |   const loginButton = page.locator('.btn.purple.sml').getByText('LOGIN');\n> 10 |   await expect(loginButton).toBeVisible();\n     |                             ^\n  11 |   await expect(loginButton).toHaveAttribute('href', 'https://express.returnit.com.au/');\n  12 |   \n  13 |   // Click login and verify redirect to external login system\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts:10:29"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-10-27T03:37:31.270Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                    "column": 29,
+                    "line": 10
+                  }
+                },
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2283,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts:10:29",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                      "column": 29,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Find and click the LOGIN button in header (using actual selector from DB)\n   9 |   const loginButton = page.locator('.btn.purple.sml').getByText('LOGIN');\n> 10 |   await expect(loginButton).toBeVisible();\n     |                             ^\n  11 |   await expect(loginButton).toHaveAttribute('href', 'https://express.returnit.com.au/');\n  12 |   \n  13 |   // Click login and verify redirect to external login system"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                        "column": 29,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n\n\n   8 |   // Find and click the LOGIN button in header (using actual selector from DB)\n   9 |   const loginButton = page.locator('.btn.purple.sml').getByText('LOGIN');\n> 10 |   await expect(loginButton).toBeVisible();\n     |                             ^\n  11 |   await expect(loginButton).toHaveAttribute('href', 'https://express.returnit.com.au/');\n  12 |   \n  13 |   // Click login and verify redirect to external login system\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts:10:29"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-10-27T03:37:34.306Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                    "column": 29,
+                    "line": 10
+                  }
+                },
+                {
+                  "workerIndex": 29,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2533,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts:10:29",
+                    "location": {
+                      "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                      "column": 29,
+                      "line": 10
+                    },
+                    "snippet": "   8 |   // Find and click the LOGIN button in header (using actual selector from DB)\n   9 |   const loginButton = page.locator('.btn.purple.sml').getByText('LOGIN');\n> 10 |   await expect(loginButton).toBeVisible();\n     |                             ^\n  11 |   await expect(loginButton).toHaveAttribute('href', 'https://express.returnit.com.au/');\n  12 |   \n  13 |   // Click login and verify redirect to external login system"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                        "column": 29,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.btn.purple.sml').getByText('LOGIN')\nExpected: visible\nError: strict mode violation: locator('.btn.purple.sml').getByText('LOGIN') resolved to 2 elements:\n    1) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').first()\n    2) <a title=\"Login\" target=\"_blank\" class=\"btn purple sml\" href=\"https://membersvic.returnit.com.au/\">Login</a> aka getByText('Login').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.btn.purple.sml').getByText('LOGIN')\u001b[22m\n\n\n   8 |   // Find and click the LOGIN button in header (using actual selector from DB)\n   9 |   const loginButton = page.locator('.btn.purple.sml').getByText('LOGIN');\n> 10 |   await expect(loginButton).toBeVisible();\n     |                             ^\n  11 |   await expect(loginButton).toHaveAttribute('href', 'https://express.returnit.com.au/');\n  12 |   \n  13 |   // Click login and verify redirect to external login system\n    at /private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts:10:29"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-10-27T03:37:37.136Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium-retry2/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eugenestuckless/eir/eirtests-runner/test-results/eirtests-1761536206261-tes-f60b6-to-access-recycling-history-chromium-retry2/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+                    "column": 29,
+                    "line": 10
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ab9313a83d4390fecd98-2a57e3a0bd6ce7679d6a",
+          "file": "../private/tmp/eirtests-1761536206261/tests/smoke/verify-user-login-to-access-recycling-history.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-10-27T03:36:48.778Z",
+    "duration": 51305.990000000005,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 10,
+    "flaky": 0
+  }
+}

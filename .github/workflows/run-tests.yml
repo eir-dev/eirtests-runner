@@ -1,0 +1,94 @@
+name: Run EirTests
+
+on:
+  # Run on schedule (every 6 hours)
+  schedule:
+    - cron: '0 */6 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run on push to main (optional)
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Execute Tests
+    runs-on: self-hosted  # Run on your self-hosted runner in private network
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run EirTests
+        env:
+          # EirTests configuration from GitHub Secrets
+          EIRTESTS_API_KEY: ${{ secrets.EIRTESTS_API_KEY }}
+          EIRTESTS_SITE_ID: ${{ vars.SITE_ID }}
+          EIRTESTS_API_URL: ${{ vars.EIRTESTS_API_URL }}
+
+          # Test configuration
+          BASE_URL: ${{ vars.BASE_URL }}
+
+          # Test secrets from GitHub Secrets
+          TEST_LOGIN_USERNAME: ${{ secrets.TEST_LOGIN_USERNAME }}
+          TEST_LOGIN_PASSWORD: ${{ secrets.TEST_LOGIN_PASSWORD }}
+          TEST_API_KEY: ${{ secrets.TEST_API_KEY }}
+
+          # Or use Vault (Phase 2)
+          # VAULT_URL: ${{ vars.VAULT_URL }}
+          # VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
+        run: npm run execute
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "Tests failed! Check the artifacts for details."
+          # Add Slack/Teams notification here if needed
+
+# Setup Instructions:
+#
+# 1. Set up a self-hosted GitHub runner in your private network:
+#    https://docs.github.com/en/actions/hosting-your-own-runners
+#
+# 2. Add secrets to your GitHub repository:
+#    Settings → Secrets and variables → Actions → New repository secret
+#
+#    Required secrets:
+#    - EIRTESTS_API_KEY: Your EirTests API key
+#    - TEST_LOGIN_USERNAME: Username for test login
+#    - TEST_LOGIN_PASSWORD: Password for test login
+#    - TEST_API_KEY: API key used in tests
+#
+# 3. Add variables to your GitHub repository:
+#    Settings → Secrets and variables → Actions → Variables tab
+#
+#    Required variables:
+#    - SITE_ID: Your EirTests site ID
+#    - EIRTESTS_API_URL: EirTests API URL (e.g., https://api.eirtests.com)
+#    - BASE_URL: Base URL for your tests (e.g., https://staging.yoursite.com)
+#
+# 4. The workflow will run automatically every 6 hours, or you can trigger it manually
+#    from the Actions tab in GitHub
