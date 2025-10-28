@@ -16,7 +16,7 @@ on:
 jobs:
   test:
     name: Execute Tests
-    runs-on: self-hosted  # Run on your self-hosted runner in private network
+    runs-on: ubuntu-latest  # GitHub-hosted runner (use 'self-hosted' for private network access)
 
     steps:
       - name: Checkout repository
@@ -70,8 +70,19 @@ jobs:
 
 # Setup Instructions:
 #
-# 1. Set up a self-hosted GitHub runner in your private network:
-#    https://docs.github.com/en/actions/hosting-your-own-runners
+# 1. Choose your runner type:
+#
+#    GitHub-hosted (current setup - for demo/public endpoints):
+#    - No setup required, works immediately
+#    - Free for public repos, included minutes for private repos
+#    - Can access public URLs only
+#    - Use: runs-on: ubuntu-latest
+#
+#    Self-hosted (for production/private network):
+#    - Runs in your private network
+#    - Can access internal endpoints/services
+#    - Setup guide: https://docs.github.com/en/actions/hosting-your-own-runners
+#    - Use: runs-on: self-hosted
 #
 # 2. Add secrets to your GitHub repository:
 #    Settings → Secrets and variables → Actions → New repository secret
